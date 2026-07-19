@@ -1,0 +1,22 @@
+# Python dependencies for the disulphide-stapled-peptide pipeline.
+# Tested with Python 3.10. Versions below are those the notebooks were
+# verified against; newer compatible releases should also work.
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# --- notebooks 1, 2, 4 and the figure scripts (fully self-contained) ---
+biopython>=1.84
+dnachisel>=3.2.16
+pandas>=2.0
+numpy>=1.24,<2.0
+scipy>=1.10
+matplotlib>=3.7
+openpyxl>=3.1          # required by pandas to read the Ellman's .xlsx (nb4)
+seaborn>=0.12
+fastcluster>=1.2       # SEC hierarchical clustering (nb3 / figure scripts)
+
+# --- notebook 3 (SEC) full reproduction only; see code/REPRODUCE_figure4_SEC.md ---
+# The SEC engine (wetlab_utils / SEC_pool_and_norm) is NOT on PyPI: clone
+#   https://github.com/bwicky/SAPP_DMX.git  and set SAPP_DMX_DIR.
+# pycorn            # HPLC/AKTA trace parser, required by nb3

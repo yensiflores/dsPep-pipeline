@@ -1,0 +1,8 @@
+; SYNTHETIC EXAMPLE INPUT — these sequences are fictional and provided only
+; to demonstrate the primer-design pipeline. They are NOT real designs.
+>example_pep1
+CGSGWKLASNPEATLC
+>example_pep2
+CAKEFGDRVPYTWNGC
+>example_pep3
+CTLNQHFGSKAWDVPC

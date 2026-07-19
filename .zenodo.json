@@ -1,0 +1,20 @@
+{
+  "title": "A scalable recombinant pipeline for disulphide-stapled peptides — code and data",
+  "upload_type": "software",
+  "description": "Analysis code and sequence-free source data for a 96-well recombinant pipeline for disulphide-stapled cyclic peptides: automated IVA primer design, qPCR cloning QC, periplasmic secretion and DOC lysis, IMAC, SEC yield analysis with hierarchical clustering, and Ellman's free-thiol staple QC. Includes the designed expression construct (His6-SUMO-linker-ccdB in pET-24b(+)). Notebooks 1, 2 and 4 run end-to-end on a bundled synthetic example; notebook 3 (SEC) reproduces Figure 4 using the third-party SAPP_DMX engine (github.com/bwicky/SAPP_DMX) plus user-supplied raw HPLC traces (see code/REPRODUCE_figure4_SEC.md). Designed peptide sequences and SPR binding data are withheld (intellectual property / reported separately). LICENSING: code (code/) is MIT; data and construct (data/, construct/) are CC BY 4.0.",
+  "creators": [
+    {"name": "Flores Bueso, Yensi", "affiliation": "CancerResearch@UCC, University College Cork, Ireland; Institute for Protein Design, University of Washington, USA"},
+    {"name": "Gökçe, Gizem", "affiliation": "Institute for Protein Design, University of Washington, USA"},
+    {"name": "Jeung, Jihun", "affiliation": "Institute for Protein Design, University of Washington, USA"},
+    {"name": "Rettie, Stephen", "affiliation": "Institute for Protein Design, University of Washington, USA"},
+    {"name": "Baker, David", "affiliation": "Institute for Protein Design, University of Washington, USA"},
+    {"name": "Tangney, Mark", "affiliation": "University College Cork, Ireland"},
+    {"name": "Bhardwaj, Gaurav", "affiliation": "Institute for Protein Design, University of Washington, USA"}
+  ],
+  "keywords": ["disulphide-stapled peptides", "macrocyclic peptides", "recombinant expression", "IVA cloning", "periplasmic secretion", "SUMO fusion", "Ellman's assay", "size-exclusion chromatography", "protein design"],
+  "license": "MIT",
+  "access_right": "open",
+  "related_identifiers": [
+    {"identifier": "https://github.com/bwicky/SAPP_DMX", "relation": "isDerivedFrom", "scheme": "url", "resource_type": "software"}
+  ]
+}
