@@ -32,7 +32,7 @@ an Ellman's free-thiol read-out for disulphide-staple quality control.
   sequence during IVA cloning)
 - `data/` — sequence-free source data, organised by figure:
   `Figure2_SourceData/` (cloning gels, qPCR traces, transformation OD),
-  `Figure3_SourceData1/` (secretion densitometry),
+  `Figure3_SourceData/` (secretion densitometry),
   `Figure4_sFigure3_SourceData/` (SEC yield table, keyed by design ID/target),
   `Figure5_sFigure4_SourceData/` (Ellman's data + merged SEC/Ellman table),
   `sFigure1_lysis-SDS-PAGE/` (DOC vs sucrose lysis gels),
