@@ -48,12 +48,11 @@ mpl.rcParams.update({
     "figure.facecolor": "white",
 })
 
-# Allow override (e.g. for running in a containerised workspace where the
-# Mac path is mounted elsewhere). On Yensi's machine the default Mac path is
-# used; in the Cowork Linux mount, set DSPEP_ROOT to the mounted path.
+# Data root: set the DSPEP_ROOT environment variable if the data lives
+# elsewhere; otherwise the default (relative) path below is used.
 ROOT = Path(os.environ.get(
     "DSPEP_ROOT",
-    "/Users/yensifb/Desktop/ProteinDesign/IPD/bhardwaj_lab/"
+    ""
     "disulfide_stapled_peptides",
 ))
 XLSX = ROOT / "cloning" / "dsPep_Trasnform_optimisation.xlsx"

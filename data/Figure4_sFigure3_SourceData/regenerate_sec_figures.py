@@ -6,7 +6,7 @@ were already excluded when the original notebook saved the HDF5).
 Outputs to: figures_draft/regenerated/
 
 Plot logic mirrors cells 21, 22, 24 of:
-  /projects/yfloresbueso/data_from_ipd/yensifb_oct2025/home/yensifb/software/ds_expression/4_sec_dslf_yfb001.ipynb
+  4_sec_dslf_yfb001.ipynb
 """
 from pathlib import Path
 import numpy as np

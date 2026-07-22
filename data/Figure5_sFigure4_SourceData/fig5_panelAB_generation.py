@@ -18,7 +18,7 @@ from scipy.stats import linregress
 # ---------------------------------------------------------------------------
 # Paths (absolute — edit if files move)
 # ---------------------------------------------------------------------------
-BASE = Path("/Users/yensifb/Desktop/ProteinDesign/IPD/bhardwaj_lab/"
+BASE = Path(""
             "disulfide_stapled_peptides/figures_draft")
 STANDARDS_CSV = BASE / "ellman_from_ada" / "standard_output.csv"
 UNKNOWNS_CSV  = BASE / "ellman_from_ada" / "unknowns_output.csv"

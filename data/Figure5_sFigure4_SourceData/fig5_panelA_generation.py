@@ -3,7 +3,7 @@ import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np, pandas as pd
 
-BASE=Path("/Users/yensifb/Desktop/ProteinDesign/IPD/bhardwaj_lab/disulfide_stapled_peptides/figures_draft")
+BASE=Path("figures_draft")
 UNK=BASE/"ellman_from_ada"/"unknowns_output.csv"
 MERGED=BASE/"Figure5"/"sec_ellman_merged.csv"
 TARGET_ORDER=["dnan","gaba","chip","bcat","mcl1","mrka"]
@@ -72,5 +72,5 @@ ax.text(-1.0,-0.155,"design →",transform=tr,ha="right",va="top",fontsize=8,col
 ax.legend(loc="upper left",bbox_to_anchor=(1.01,1.0),frameon=False,title="target",fontsize=9,title_fontsize=10)
 fig.subplots_adjust(bottom=0.20)
 for ext in ["png","svg","pdf"]:
-    fig.savefig(f"'/Users/yensifb/Desktop/ProteinDesign/IPD/bhardwaj_lab/disulfide_stapled_peptides/figures_draft/Figure5/fig5_panelB_v2'.{ext}",bbox_inches="tight")
+    fig.savefig(f"'figures_draft/Figure5/fig5_panelB_v2'.{ext}",bbox_inches="tight")
 print("done; n_unk",len(merged),"n_bsa",len(bsa))
