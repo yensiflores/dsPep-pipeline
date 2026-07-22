@@ -15,6 +15,7 @@ matplotlib>=3.7
 openpyxl>=3.1          # required by pandas to read the Ellman's .xlsx (nb4)
 seaborn>=0.12
 fastcluster>=1.2       # SEC hierarchical clustering (nb3 / figure scripts)
+Pillow>=9.0            # Fig 3B densitometry script (image reading)
 
 # --- notebook 3 (SEC) full reproduction only; see code/REPRODUCE_figure4_SEC.md ---
 # The SEC engine (wetlab_utils / SEC_pool_and_norm) is NOT on PyPI: clone
