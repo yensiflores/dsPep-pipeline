@@ -15,12 +15,19 @@ Output: densitometry_pct_total_lane.csv  (gel, signal, temp_C, design, pct_of_to
 Author: Y. Flores Bueso.
 """
 import numpy as np, json, csv, sys
+from pathlib import Path
 from PIL import Image
 from collections import defaultdict
 
-PNG  = sys.argv[1] if len(sys.argv) > 1 else 'annex_temperature_stacked.png'
-BOX  = sys.argv[2] if len(sys.argv) > 2 else 'boxes_mapped.json'
-OUT  = sys.argv[3] if len(sys.argv) > 3 else 'densitometry_pct_total_lane.csv'
+# Defaults resolve relative to this script, so it runs with no arguments from
+# anywhere. The temperature montage lives in the sFigure2 folder; the box
+# coordinates sit next to this script. Output goes to a *_regenerated.csv so a
+# reproduction run never overwrites the published densitometry_pct_total_lane.csv
+# (the two agree to within ~0.5%, i.e. rounding, as expected for pixel densitometry).
+HERE = Path(__file__).resolve().parent
+PNG  = sys.argv[1] if len(sys.argv) > 1 else str(HERE.parent / 'sFigure2_temperature_gels' / 'annex_temperature_stacked.png')
+BOX  = sys.argv[2] if len(sys.argv) > 2 else str(HERE / 'boxes_mapped.json')
+OUT  = sys.argv[3] if len(sys.argv) > 3 else str(HERE / 'densitometry_pct_total_lane_regenerated.csv')
 
 A = np.asarray(Image.open(PNG).convert('RGB')).astype(int)
 R, Gc, Bc = A[:, :, 0], A[:, :, 1], A[:, :, 2]
