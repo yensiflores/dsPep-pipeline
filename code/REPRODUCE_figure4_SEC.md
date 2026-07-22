@@ -42,6 +42,6 @@ jupyter notebook 3_sec_analysis.ipynb
 Figures and tables are written to `code/outputs/` (and `code/outputs/SEC_outputs/`).
 The scalar results table it saves (`YYYY-MM-DD_expdata_df.csv`) corresponds,
 after removing the peptide/DNA-sequence columns, to
-`data/Figure4_source_data/Figure4_library_60variants_SEC_yield_REDACTED.csv`.
+`data/Figure4_sFigure3_SourceData/Figure4_library_60variants_SEC_yield_REDACTED.csv`.
 
 

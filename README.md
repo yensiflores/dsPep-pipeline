@@ -30,9 +30,14 @@ an Ellman's free-thiol read-out for disulphide-staple quality control.
   `YFB001_pET24b_His6-SUMO-linker-ccdB.fasta` (His6–SUMO–linker–ccdB in a
   pET-24b(+) backbone; the ccdB cassette is replaced by the peptide-encoding
   sequence during IVA cloning)
-- `data/` — sequence-free source data for Figures 2–5 (raw gels, qPCR traces,
-  transformation and SEC yield tables keyed by design ID and target, Ellman's
-  results, densitometry). Each `Figure*_source_data/` folder has its own README.
+- `data/` — sequence-free source data, organised by figure:
+  `Figure2_SourceData/` (cloning gels, qPCR traces, transformation OD),
+  `Figure3_SourceData1/` (secretion densitometry),
+  `Figure4_sFigure3_SourceData/` (SEC yield table, keyed by design ID/target),
+  `Figure5_sFigure4_SourceData/` (Ellman's data + merged SEC/Ellman table),
+  `sFigure1_lysis-SDS-PAGE/` (DOC vs sucrose lysis gels),
+  `sFigure2_temperature_gels/` (secretion-signal temperature series). Several
+  folders carry their own README.
 - `examples/example_peptides.fasta` — a small **synthetic** example input
 - `requirements.txt` — Python dependencies (tested on Python 3.10)
 
@@ -49,7 +54,7 @@ Run the notebooks in order; intermediate/derived files are written to
   synthetic `examples/example_peptides.fasta` and writes `pcr_input.csv`;
   notebook 2 consumes that plus the `construct/` plasmid to simulate the
   assembly and translate the His6–SUMO–peptide ORF; notebook 4 reads the
-  Ellman's data in `data/Figure5_source_data/ellmans_raw/` and reproduces the
+  Ellman's data in `data/Figure5_sFigure4_SourceData/ellmans_raw/` and reproduces the
   standard curve and free-thiol table. The constant IVA adapter / primer-binding
   / T7 / RBS sequences these notebooks use are part of the **public construct
   backbone** in `construct/` — no peptide design sequences are involved.
