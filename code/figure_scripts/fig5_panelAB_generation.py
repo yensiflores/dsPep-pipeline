@@ -110,7 +110,7 @@ def make_panel_a():
 # ---------------------------------------------------------------------------
 # Panel B — Free Cys per unknown + BSA controls
 # ---------------------------------------------------------------------------
-TARGET_ORDER = ["dnan", "gaba", "chip", "bcat", "mcl1", "mrka"]
+TARGET_ORDER = ["Target9", "Target2", "Target7", "Target4", "Target8", "Target5"]
 
 
 def make_panel_b():

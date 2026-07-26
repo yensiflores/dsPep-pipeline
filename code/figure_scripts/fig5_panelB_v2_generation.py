@@ -6,7 +6,7 @@ import numpy as np, pandas as pd
 BASE=Path("figures_draft")
 UNK=BASE/"ellman_from_ada"/"unknowns_output.csv"
 MERGED=BASE/"Figure5"/"sec_ellman_merged.csv"
-TARGET_ORDER=["dnan","gaba","chip","bcat","mcl1","mrka"]
+TARGET_ORDER=["Target9","Target2","Target7","Target4","Target8","Target5"]
 
 plt.rcParams.update({"font.family":"DejaVu Sans","axes.spines.top":False,"axes.spines.right":False,
     "savefig.facecolor":"white","figure.facecolor":"white"})

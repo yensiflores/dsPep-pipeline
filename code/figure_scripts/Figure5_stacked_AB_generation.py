@@ -5,8 +5,8 @@ from matplotlib.gridspec import GridSpec
 import numpy as np, csv
 BASE=Path("figures_draft")
 MERGED=BASE/"Figure5"/"sec_ellman_merged.csv"
-COL={"bcat":"#1f77b4","chip":"#2ca02c","dnan":"#9467bd","gaba":"#e377c2","mcl1":"#bcbd22","mrka":"#17becf"}
-NICE={"dnan":"DnaN","gaba":"GABARAP","chip":"CHIP","bcat":"\u03b2-catenin","mcl1":"MCL-1","mrka":"MrkA"}
+COL={"Target4":"#1f77b4","Target7":"#2ca02c","Target9":"#9467bd","Target2":"#e377c2","Target8":"#bcbd22","Target5":"#17becf"}
+NICE={"Target9":"Target 9","Target2":"Target 2","Target7":"Target 7","Target4":"Target 4","Target8":"Target 8","Target5":"Target 5"}
 FAIL="Failure (10 µM)"; NOISE="Background noise (2 µM)"; AXW="bold"; NUMW="semibold"
 rows=list(csv.DictReader(MERGED.open()))
 for r in rows:

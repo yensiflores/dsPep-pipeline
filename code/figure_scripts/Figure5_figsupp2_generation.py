@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np, csv
 BASE=Path("figures_draft")
 MERGED=BASE/"Figure5"/"sec_ellman_merged.csv"; UNK=BASE/"ellman_from_ada"/"unknowns_output.csv"
-COL={"bcat":"#1f77b4","chip":"#2ca02c","dnan":"#9467bd","gaba":"#e377c2","mcl1":"#bcbd22","mrka":"#17becf"}
-BSACOL="#d62728"; NICE={"dnan":"DnaN","gaba":"GABARAP","chip":"CHIP","bcat":"\u03b2-catenin","mcl1":"MCL-1","mrka":"MrkA"}
+COL={"Target4":"#1f77b4","Target7":"#2ca02c","Target9":"#9467bd","Target2":"#e377c2","Target8":"#bcbd22","Target5":"#17becf"}
+BSACOL="#d62728"; NICE={"Target9":"Target 9","Target2":"Target 2","Target7":"Target 7","Target4":"Target 4","Target8":"Target 8","Target5":"Target 5"}
 FAIL="Failure (10 µM)"; NOISE="Background noise (2 µM)"
 rows=list(csv.DictReader(MERGED.open()))
 for r in rows: r["target"]=r["target"].lower(); r["fc"]=float(r["ell_freecys_uM"]); r["design"]=r["name"].split("_")[-1]
 unk=list(csv.DictReader(UNK.open())); k=list(unk[0].keys())
 bsa=[(r[k[0]],float(r[k[1]])) for r in unk if str(r[k[0]]).upper().startswith("BSA")]
-order=["dnan","gaba","chip","bcat","mcl1","mrka"]
+order=["Target9","Target2","Target7","Target4","Target8","Target5"]
 plt.rcParams.update({"font.family":"Arial","svg.fonttype":"none","axes.spines.top":False,
     "axes.spines.right":False,"savefig.facecolor":"white","figure.facecolor":"white"})
 fig,ax=plt.subplots(figsize=(11,4.2)); floor=0.1
