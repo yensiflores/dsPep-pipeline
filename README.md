@@ -71,9 +71,8 @@ Run the notebooks in order; intermediate/derived files are written to
   de-identified design ID (sequence columns removed — see the per-figure READMEs).
 - **The construct backbone sequence is shared** (see `construct/`); it contains
   no peptide designs.
-- **Surface plasmon resonance (SPR) binding data are not included here.** Those
-  paired recombinant/synthetic binding measurements are reported separately and
-  are withheld from this record.
+- **Binding-target names are anonymised** (Target 1–Target 9) throughout the code
+  and data.
 
 ## Licence
 - Code (`code/`): MIT — see `LICENSE-MIT.txt`
