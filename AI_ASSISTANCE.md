@@ -54,8 +54,9 @@ the primer-design -> cloning-QC chain runs; do not touch any peptide sequence.
 ## 2. Figure-panel generation
 
 AI assistance was used to write and iterate the matplotlib figure-generation
-scripts under `code/figure_scripts/` and the per-figure `data/` folders. Target
-identities were named where relevant; peptide sequences were never included.
+scripts under `code/figure_scripts/` and the per-figure `data/` folders. In the
+released files the binding targets are anonymised (Target 1–Target 9) and peptide
+sequences were never included.
 Representative prompts (paraphrased, internal/unpublished content removed):
 ```
 Regenerate the Figure 2 transformation-efficiency panels from
