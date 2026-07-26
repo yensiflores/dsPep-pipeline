@@ -54,11 +54,10 @@ legend, recoloured by target, after the unknowns table is updated.
 
 ## 3. Manuscript text
 
-The manuscript text was **written by the authors**. AI assistance was limited to
-light copy-editing of author-written prose (e.g. tightening phrasing in the
-Discussion). Those prompts referenced unpublished manuscript content and are
-therefore **not reproduced here**; the formal disclosure of AI assistance for the
-text belongs in the manuscript itself (see its author-contributions / use-of-AI
+The manuscript text was **written by the authors**; AI assistance was used for
+editing the manuscript. Those prompts referenced unpublished manuscript content and
+are therefore **not reproduced here**; the formal disclosure of AI assistance for
+the text belongs in the manuscript itself (see its author-contributions / use-of-AI
 statement). All text was written and approved by the authors.
 
 ---
