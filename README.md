@@ -38,6 +38,9 @@ an Ellman's free-thiol read-out for disulphide-staple quality control.
   `sFigure1_lysis-SDS-PAGE/` (DOC vs sucrose lysis gels),
   `sFigure2_temperature_gels/` (secretion-signal temperature series). Several
   folders carry their own README.
+- `protocols/` — step-by-step wet-lab protocols (IVA cloning, expression &
+  purification, Ellman's free-thiol assay); see `protocols/README.md`. The Figure 3B
+  densitometry method is in `data/Figure3_SourceData/densitometry_method.pdf`.
 - `examples/example_peptides.fasta` — a small **synthetic** example input
 - `requirements.txt` — Python dependencies (tested on Python 3.10)
 
