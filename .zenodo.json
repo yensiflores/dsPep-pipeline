@@ -13,7 +13,7 @@
   ],
   "keywords": ["disulphide-stapled peptides", "macrocyclic peptides", "recombinant expression", "IVA cloning", "periplasmic secretion", "SUMO fusion", "Ellman's assay", "size-exclusion chromatography", "protein design"],
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "v2",
   "access_right": "open",
   "related_identifiers": [
     {"identifier": "https://github.com/bwicky/SAPP_DMX", "relation": "isDerivedFrom", "scheme": "url", "resource_type": "software"}

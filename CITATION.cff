@@ -23,8 +23,8 @@ authors:
   - family-names: "Bhardwaj"
     given-names: "Gaurav"
     affiliation: "Institute for Protein Design, University of Washington, USA"
-version: "1.1.0"
+version: "v2"
 date-released: "2026-07-28"
-doi: "10.5281/zenodo.21441297"
+doi: "10.5281/zenodo.21645753"
 repository-code: "https://github.com/yensiflores/dsPep-pipeline"
 license: MIT

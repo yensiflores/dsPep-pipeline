@@ -97,5 +97,5 @@ full disclosure, including representative prompts, for reproducibility.
 
 ## Citation
 If you use this pipeline, please cite the manuscript and this deposit
-(DOI: [10.5281/zenodo.21441297](https://doi.org/10.5281/zenodo.21441297); see
+(DOI: [10.5281/zenodo.21645753](https://doi.org/10.5281/zenodo.21645753); see
 `CITATION.cff`), and cite **SAPP_DMX** (above) if you use the SEC analysis.
