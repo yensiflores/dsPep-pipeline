@@ -1,5 +1,7 @@
-The data files in the data/ and construct/ directories are licensed under the
-Creative Commons Attribution 4.0 International License (CC BY 4.0).
+All non-code material in this deposit — the data/, construct/, protocols/ and
+examples/ directories and the documentation — is licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0). (All code, i.e. every
+.py and .ipynb file wherever located, is under the MIT License; see LICENSE-MIT.txt.)
 Full text: https://creativecommons.org/licenses/by/4.0/legalcode
 
 You are free to share and adapt the material for any purpose, provided you give

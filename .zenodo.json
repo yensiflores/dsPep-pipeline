@@ -1,21 +1,61 @@
 {
   "title": "A scalable recombinant pipeline for disulphide-stapled peptides — code and data",
   "upload_type": "software",
-  "description": "Analysis code and sequence-free source data for a 96-well recombinant pipeline for disulphide-stapled cyclic peptides: automated IVA primer design, qPCR cloning QC, periplasmic secretion and DOC lysis, IMAC, SEC yield analysis with hierarchical clustering, and Ellman's free-thiol staple QC. Includes the designed expression construct (His6-SUMO-linker-ccdB in pET-24b(+)). Notebooks 1, 2 and 4 run end-to-end on a bundled synthetic example; notebook 3 (SEC) reproduces Figure 4 using the third-party SAPP_DMX engine (github.com/bwicky/SAPP_DMX) plus user-supplied raw HPLC traces (see code/REPRODUCE_figure4_SEC.md). Designed peptide sequences are withheld (intellectual property) and binding-target names are anonymised (Target 1-9). LICENSING: code (code/) is MIT; data and construct (data/, construct/) are CC BY 4.0.",
+  "description": "Analysis code and sequence-free source data for a 96-well recombinant pipeline for disulphide-stapled cyclic peptides: automated IVA primer design, qPCR cloning QC, periplasmic secretion and DOC lysis, IMAC, SEC yield analysis with hierarchical clustering, and Ellman's free-thiol staple QC. Includes the designed expression construct (His6-SUMO-linker-ccdB in pET-24b(+)), the analysis notebooks and figure scripts, source data for Figures 2–5 (including the anonymised per-well SEC traces behind Figure 4), SPR sensorgrams for the representative designs in Figure 6, and the published Figures 1–6 as rendered (anonymised) panels. Figures 4 and 6 regenerate directly from the deposited anonymised data with no external inputs; notebook 3 documents the full SEC analysis with the third-party SAPP_DMX engine (github.com/bwicky/SAPP_DMX). See the README for per-figure reproduction notes. Designed peptide sequences are withheld (intellectual property) and binding-target names are anonymised (Target 1–9). LICENSING: all code (.py/.ipynb, wherever located) is MIT; all other material (data, construct, protocols, examples, documentation) is CC BY 4.0. The MIT licence covers only the code in this deposit; the third-party SAPP_DMX package used by notebook 3 is not included here and is governed by its own licence.",
   "creators": [
-    {"name": "Flores Bueso, Yensi", "affiliation": "CancerResearch@UCC, University College Cork, Ireland; Institute for Protein Design, University of Washington, USA"},
-    {"name": "Gökçe, Gizem", "affiliation": "Institute for Protein Design, University of Washington, USA"},
-    {"name": "Jeung, Jihun", "affiliation": "Institute for Protein Design, University of Washington, USA"},
-    {"name": "Rettie, Stephen", "affiliation": "Institute for Protein Design, University of Washington, USA"},
-    {"name": "Baker, David", "affiliation": "Institute for Protein Design, University of Washington, USA"},
-    {"name": "Tangney, Mark", "affiliation": "University College Cork, Ireland"},
-    {"name": "Bhardwaj, Gaurav", "affiliation": "Institute for Protein Design, University of Washington, USA"}
+    {
+      "name": "Flores Bueso, Yensi",
+      "affiliation": "CancerResearch@UCC, University College Cork, Ireland; Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Gökçe-Alpkılıç, Gizem",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Jeung, Jihun",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Rettie, Stephen",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Li, Xinting",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Tangney, Mark",
+      "affiliation": "University College Cork, Ireland"
+    },
+    {
+      "name": "Baker, David",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    },
+    {
+      "name": "Bhardwaj, Gaurav",
+      "affiliation": "Institute for Protein Design, University of Washington, USA"
+    }
   ],
-  "keywords": ["disulphide-stapled peptides", "macrocyclic peptides", "recombinant expression", "IVA cloning", "periplasmic secretion", "SUMO fusion", "Ellman's assay", "size-exclusion chromatography", "protein design"],
+  "keywords": [
+    "disulphide-stapled peptides",
+    "macrocyclic peptides",
+    "recombinant expression",
+    "IVA cloning",
+    "periplasmic secretion",
+    "SUMO fusion",
+    "Ellman's assay",
+    "size-exclusion chromatography",
+    "protein design"
+  ],
   "license": "MIT",
-  "version": "v2",
+  "version": "v3",
   "access_right": "open",
   "related_identifiers": [
-    {"identifier": "https://github.com/bwicky/SAPP_DMX", "relation": "isDerivedFrom", "scheme": "url", "resource_type": "software"}
+    {
+      "identifier": "https://github.com/bwicky/SAPP_DMX",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "software"
+    }
   ]
 }

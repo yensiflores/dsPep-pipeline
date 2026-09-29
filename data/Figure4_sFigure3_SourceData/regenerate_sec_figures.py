@@ -1,9 +1,7 @@
 """
-Regenerate Figs 4A/B/C/D from the saved SEC analysis HDF5,
-using only the 60 successfully-pooled wells (the 36 flat ones
-were already excluded when the original notebook saved the HDF5).
+Regenerate Figs 4A/B/C/D from the saved SEC analysis HDF5.
 
-Outputs to: figures_draft/regenerated/
+Outputs to: a regenerated/ folder next to this script
 
 Plot logic mirrors cells 21, 22, 24 of:
   4_sec_dslf_yfb001.ipynb
@@ -20,7 +18,7 @@ from scipy.cluster import hierarchy
 HERE = Path(__file__).parent
 OUT = HERE / "regenerated"
 OUT.mkdir(exist_ok=True)
-H5 = HERE / "2025-04-16_expdata_df.h5"
+H5 = HERE / "Figure4_SEC_traces_60variants_ANON.h5"
 
 sns.set_theme(
     context="talk",
@@ -65,12 +63,12 @@ for plot_i, src_i in enumerate(clustered_idx):
 ax[0].set(xlabel="Retention vol. / mL", ylabel="A280 / mAU")
 ax[1].set(xlabel="Retention vol. / mL", yticks=[])
 ax[1].spines["left"].set_visible(False)
-ax[0].set_title(f"$N = {N}$ (flat wells excluded)")
+ax[0].set_title(f"$N = {N}$ cloned designs")
 plt.tight_layout()
-plt.savefig(OUT / "fig4A_sec_traces_filtered.png", dpi=300)
-plt.savefig(OUT / "fig4A_sec_traces_filtered.svg")
+plt.savefig(OUT / "fig4A_sec_traces.png", dpi=300)
+plt.savefig(OUT / "fig4A_sec_traces.svg")
 plt.close()
-print("✓ fig4A_sec_traces_filtered.png")
+print("✓ fig4A_sec_traces.png")
 
 # =============================================================
 # Fig 4B — yield histogram (mirrors notebook cell 22)
@@ -97,10 +95,10 @@ ax.set_xlabel("Total soluble yield / mg")
 ax.set_title(f"Median = {median:.3f} mg  ($N = {N}$)")
 ax2.set_ylabel("Cumulative proportion")
 plt.tight_layout()
-plt.savefig(OUT / "fig4B_yield_histogram_filtered.png", dpi=300)
-plt.savefig(OUT / "fig4B_yield_histogram_filtered.svg")
+plt.savefig(OUT / "fig4B_yield_histogram.png", dpi=300)
+plt.savefig(OUT / "fig4B_yield_histogram.svg")
 plt.close()
-print("✓ fig4B_yield_histogram_filtered.png")
+print("✓ fig4B_yield_histogram.png")
 
 # =============================================================
 # Fig 4C — per-target yield boxplot + swarm (NEW)

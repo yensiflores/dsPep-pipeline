@@ -26,7 +26,6 @@ Panel E (cPCR + Sanger pass rates):
 
 from pathlib import Path
 import os
-import openpyxl
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
@@ -48,15 +47,10 @@ mpl.rcParams.update({
     "figure.facecolor": "white",
 })
 
-# Data root: set the DSPEP_ROOT environment variable if the data lives
-# elsewhere; otherwise the default (relative) path below is used.
-ROOT = Path(os.environ.get(
-    "DSPEP_ROOT",
-    ""
-    "disulfide_stapled_peptides",
-))
-XLSX = ROOT / "cloning" / "dsPep_Trasnform_optimisation.xlsx"
-OUT_DIR = ROOT / "figures_draft" / "svg_panels"
+# Reads the deposited OD600 source table that sits next to this script.
+HERE = Path(__file__).resolve().parent
+CSV = HERE / "Figure2_transformation_OD_test.csv"
+OUT_DIR = HERE
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 CONDITIONS = [
@@ -70,23 +64,26 @@ CONDITIONS = [
 # Panel D : OD600 heatmap
 # ---------------------------------------------------------------------------
 def load_od600():
-    """Return dict {well_id (e.g. 'A1') -> OD600 float} from column C."""
-    wb = openpyxl.load_workbook(XLSX, data_only=True)
-    ws = wb["Sheet1"]
+    """Return dict {well_id (e.g. 'A1') -> OD600 float} from the deposited CSV.
+
+    Column 0 is the well ID (A1..H12), column 1 the 600 nm absorbance. Any
+    trailing columns (a second, unrelated block in the export) are ignored.
+    """
+    import csv as _csv
     od = {}
-    for row in ws.iter_rows(min_row=2, max_row=ws.max_row, values_only=True):
-        well = row[1]
-        val = row[2]
-        if well is None or val is None:
-            continue
-        well = str(well).strip()
-        # well IDs of interest look like "A1".."H12"
-        if (len(well) >= 2 and well[0] in "ABCDEFGH"
-                and well[1:].isdigit() and 1 <= int(well[1:]) <= 12):
-            try:
-                od[well] = float(val)
-            except (TypeError, ValueError):
+    with open(CSV, newline="") as fh:
+        reader = _csv.reader(fh)
+        next(reader, None)  # header row
+        for row in reader:
+            if len(row) < 2:
                 continue
+            well = str(row[0]).strip()
+            if (len(well) >= 2 and well[0] in "ABCDEFGH"
+                    and well[1:].isdigit() and 1 <= int(well[1:]) <= 12):
+                try:
+                    od[well] = float(row[1])
+                except (TypeError, ValueError):
+                    continue
     return od
 
 

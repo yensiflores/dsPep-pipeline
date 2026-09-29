@@ -1,3 +1,11 @@
+Scope: this MIT License applies to all code in this deposit — every .py and
+.ipynb file, wherever it is located (including code files that sit inside the
+data/ directory). Non-code material is licensed CC BY 4.0; see
+LICENSE-DATA-CC-BY-4.0.txt.
+It does not extend to third-party code the notebooks import but that is not
+redistributed here (notably SAPP_DMX, github.com/bwicky/SAPP_DMX), which carries its
+own licence.
+
 MIT License
 
 Copyright (c) 2026 Yensi Flores Bueso

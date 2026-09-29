@@ -1,3 +1,8 @@
+# PROVENANCE (not runnable against this deposit): composites the Figure 1 workflow
+# schematic with matplotlib panels via svgutils. It needs two assets that are NOT
+# bundled here: manuscript/SVG/Asset 1.svg (vector schematic) and
+# manuscript/workflow_figure1.jpg (raster preview). Kept to document how Figure 1 was assembled.
+
 """
 Build composite Figure 1 for the disulfide-stapled peptides paper.
 
@@ -14,7 +19,7 @@ A PNG preview is rendered separately by embedding workflow_figure1.jpg
 as raster in the same matplotlib layout (matplotlib has no native SVG
 embedding without cairosvg).
 
-Outputs (in figures_draft/regenerated/):
+Outputs (in a regenerated/ folder next to this script):
   - fig1_composite.svg  (fully vector for Illustrator)
   - fig1_composite.png  (300 dpi raster preview)
   - _fig1_BC.svg        (intermediate B+C-only SVG, kept for inspection)

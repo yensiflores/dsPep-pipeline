@@ -1,3 +1,8 @@
+# PROVENANCE (not runnable against this deposit): documents how the deposited,
+# anonymised Figure5_sec_ellman_merged.csv was produced from the internal SEC
+# dataframe (2025-04-16_expdata_df.csv, not redistributed) and the Ellman's
+# unknowns table. The merged product it outputs IS provided in this folder.
+
 """
 Merge SEC yield data with Ellman's free-Cys data, group by target,
 plot per-target free Cys distribution as Fig 5 Panel C candidate.

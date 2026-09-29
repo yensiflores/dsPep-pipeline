@@ -2,7 +2,7 @@
 
 This repository accompanies the manuscript *"A scalable recombinant pipeline for
 disulphide-stapled peptides validated across diverse target classes"*
-(Flores Bueso, Gökçe, Jeung, Rettie, Baker, Tangney & Bhardwaj). It contains the
+(Flores Bueso, Gökçe-Alpkılıç, Jeung, Rettie, Li, Tangney, Baker & Bhardwaj). It contains the
 analysis code and the sequence-free source data needed to reproduce the methods
 and figures.
 
@@ -35,6 +35,7 @@ an Ellman's free-thiol read-out for disulphide-staple quality control.
   `Figure3_SourceData/` (secretion densitometry),
   `Figure4_sFigure3_SourceData/` (SEC yield table, keyed by design ID/target),
   `Figure5_sFigure4_SourceData/` (Ellman's data + merged SEC/Ellman table),
+  `Figure6_SourceData/` (SPR sensorgrams for the representative Figure 6 designs; measured + 1:1 global fit),
   `sFigure1_lysis-SDS-PAGE/` (DOC vs sucrose lysis gels),
   `sFigure2_temperature_gels/` (secretion-signal temperature series). Several
   folders carry their own README.
@@ -42,6 +43,8 @@ an Ellman's free-thiol read-out for disulphide-staple quality control.
   purification, Ellman's free-thiol assay); see `protocols/README.md`. The Figure 3B
   densitometry method is in `data/Figure3_SourceData/densitometry_method.pdf`.
 - `examples/example_peptides.fasta` — a small **synthetic** example input
+- `figures/` — the published Figure 1–6 as rendered (anonymised), so the source
+  data and scripts can be checked against what the paper shows
 - `requirements.txt` — Python dependencies (tested on Python 3.10)
 
 ## Running the pipeline
@@ -61,10 +64,14 @@ Run the notebooks in order; intermediate/derived files are written to
   standard curve and free-thiol table. The constant IVA adapter / primer-binding
   / T7 / RBS sequences these notebooks use are part of the **public construct
   backbone** in `construct/` — no peptide design sequences are involved.
-- **Notebook 3 (SEC) is provided in full but needs external inputs** to
-  reproduce Figure 4: the SEC engine in the SAPP_DMX repository
-  (github.com/bwicky/SAPP_DMX), plus raw HPLC traces and a column-calibration
-  file. See `code/REPRODUCE_figure4_SEC.md`.
+- **Figure 4 regenerates directly from the deposit.** `code/figure_scripts/regenerate_sec_figures.py` reads the anonymised, sequence-free
+  `data/Figure4_sFigure3_SourceData/Figure4_SEC_traces_60variants_ANON.h5` (per-well SEC
+  traces + yields) and redraws Figure 4 A-C, plus supplementary Figure 3 (MW vs retention), with no external inputs. **Notebook 3** documents
+  the upstream step that produced those traces from raw HPLC chromatograms, using the
+  third-party SAPP_DMX engine (github.com/bwicky/SAPP_DMX) plus raw traces and a column
+  calibration; that step, not the figure, is what needs external inputs. See
+  `code/REPRODUCE_figure4_SEC.md`.
+- **Figure 6 (SPR) regenerates directly from the deposit.** `code/figure_scripts/regenerate_figure6_SPR.py` reads the single-cycle-kinetics sensorgrams in `data/Figure6_SourceData/` (one tab-delimited file per panel: measured response and global 1:1 fit) and redraws the Figure 6 panels. No external inputs or withheld sequences are required.
 
 ## Important notes on scope
 - **Designed peptide sequences are not included.** The peptide amino-acid
@@ -78,10 +85,8 @@ Run the notebooks in order; intermediate/derived files are written to
   and data.
 
 ## Licence
-- Code (`code/`): MIT — see `LICENSE-MIT.txt`
-- Data and construct (`data/`, `construct/`): CC BY 4.0 — see
-  `LICENSE-DATA-CC-BY-4.0.txt`
-
+Licensed **by kind, not by directory**: all code in this deposit (every `.py`
+and `.ipynb` file, wherever it sits) is under the **MIT License** (`LICENSE-MIT.txt`); all other material — the `data/`, `construct/`, `protocols/`, `examples/` and `figures/` directories and the documentation — is under **CC BY 4.0** (`LICENSE-DATA-CC-BY-4.0.txt`). The MIT licence covers only the code **in this deposit**; the third-party **SAPP_DMX** package (github.com/bwicky/SAPP_DMX), which notebook 3 imports, is not redistributed here and is governed by its own licence.
 ## Acknowledgements
 Notebook 3 (SEC analysis) is built on top of **SAPP_DMX** by **Basile Wicky**
 (Institute for Protein Design) — https://github.com/bwicky/SAPP_DMX — which
@@ -97,5 +102,9 @@ full disclosure, including representative prompts, for reproducibility.
 
 ## Citation
 If you use this pipeline, please cite the manuscript and this deposit
-(DOI: [10.5281/zenodo.21645753](https://doi.org/10.5281/zenodo.21645753); see
+(DOI: [10.5281/zenodo.23035383](https://doi.org/10.5281/zenodo.23035383); see
 `CITATION.cff`), and cite **SAPP_DMX** (above) if you use the SEC analysis.
+
+## Version history
+- v3 (2026-09-29): added Figure 6 SPR source data (`data/Figure6_SourceData/`); wording clean-up.
+- v1.1.0: initial public release.

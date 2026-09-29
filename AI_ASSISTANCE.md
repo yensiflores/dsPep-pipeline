@@ -44,10 +44,6 @@ the binding targets are anonymised (Target 1–Target 9) and peptide sequences w
 never included.
 Representative prompts (paraphrased, internal/unpublished content removed):
 ```
-Regenerate the Figure 2 transformation-efficiency panels from
-fig2_panelDE_generation.py using the corrected row-pair -> condition mapping from
-the lab notebook; verify the SVGs render in the new order.
-
 Rerun fig5_panelAB_generation.py so all measured targets appear in Panel B's
 legend, recoloured by target, after the unknowns table is updated.
 ```
